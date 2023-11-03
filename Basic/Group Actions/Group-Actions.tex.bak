@@ -73,56 +73,25 @@ $\Box$\fi\par\vskip12pt}
 
 \begin{document}
 
-
-\title[Group Actions]
+\title[ Group Actions]
 {Group Actions}%
-\maketitle
 
-\l Exercises
 
-\l 1. Let $\r: G\mapsto Sym(\O)$ be a representation of the group $G$ on the set $\O$. Show that this defines an action of $G$ on $\O$ by setting $\a^x:=\a^{\r(x)}$ for all $\a\in \O$ and $x\in G$, and that $\r$ is the representation which corresponds to this action.
+Exercises
 
-\pf Since $\r$ is a representation of $G$ on $\O$, $\r$ is a homomorphism. Let $\a^x:=\a^{\r(x)}$, then 
-\begin{align*}
- &\a^1=\a^{\r(1)}=\a;\\
- &(\a^x)^y=(\a^{\r(x)})^{\r(y)}=\a^{\r(xy)}=\a^{xy}. 
-\end{align*}
-Thus, this defines an action of $G$ on $\O$.
+1. Let $\r: G\mapsto Sym(\O)$ be a representation of the group $G$ on the set $\O$. Show that this defines an action of $G$ on $\O$ by setting $\a^x:=\a^{\r(x)}$ for all $\a\in \O$ and $x\in G$, and that $\r$ is the representation which corresponds to this action.
 
-\m
+\pf: 
 
-\l 2. Explain why we do not usually get an action of a group $G$ on itself by defining $a^x:=xa$. Show, however, that $a^x:=x^{-1}a$ does give an action of $G$ on itself (called the left regular representation of $G$). Similarly, show how to define an action of a group on the set of left cosets $aH$($a\in G$) of a subgroup $H$.
 
-\pf Let $a^x:=xa$, then 
-\begin{align*}
- (a^x)^y=(xa)^y=yxa \neq xya=a^{xy}.
-\end{align*}
-The equation holds if and only if $G$ is an abelian group.
 
-For all $a\in G$ and $x\in G$, let $a^x:=x^{-1}a$, then
-\begin{align*}
- &a^1=1^{-1}a=a;\\
- &(a^x)^y=(x^{-1}a)^{y}=y^{-1}x^{-1}a=(xy)^{-1}a=a^{xy}.
-\end{align*}
-Thus, this defines an action of $G$ on itself.
 
-Let $\O=\{aH|\ a\in G\}$, defining an action of $G$ on $\O$ by setting $(aH)^x:=x^{-1}aH$.
 
-\m
 
-\l 3. Show that the kernel of $\r_H$ in Example 1.3.4 is equal to the largest normal subgroup of $G$ contained in the subgroup $H$.
 
-\pf Let $\Ga_H:=\{Ha|\ a\in G\}$ and define an action if $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$. We denote the corresponding representation of $G$ on $\Ga_H$ by $\r_H$. We have 
-\begin{align*}
- {\rm ker}\ \r_H\ =\ \bigcap_{a\in G}a^{-1}Ha.
-\end{align*}
-Assume that $N$ is the subgroup of $H$ and $N\unlhd G$, then we have $N=N^a\le H^a$ for any $a\in G$. Thus, we obtained that $N\le \bigcap_{a\in G}H^a={\rm ker}\ \r_H$.
 
-Hence, by the arbitrariness of $N$, ${\rm ker}\ \r_H$ is equal to the largest normal subgroup of $G$ contained in the subgroup $H$.
 
-\m
 
-\l 4. Use the previous exercise to prove that if $G$ is a group with a subgroup $H$ of finite index $n$, then $G$ has a normal subgroup $K$ contained in $H$ whose index in $G$ is finite and divides $n!$. In particular, if $H$ has index 2 then $H$ is normal in $G$.
 
 
 
