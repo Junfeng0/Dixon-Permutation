@@ -82,10 +82,10 @@ $\Box$\fi\par\vskip12pt}
 
 \l 1. Let $\r: G\mapsto Sym(\O)$ be a representation of the group $G$ on the set $\O$. Show that this defines an action of $G$ on $\O$ by setting $\a^x:=\a^{\r(x)}$ for all $\a\in \O$ and $x\in G$, and that $\r$ is the representation which corresponds to this action.
 
-\pf Since $\r$ is a representation of $G$ on $\O$, $\r$ is a homomorphism. Let $\a^x:=\a^{\r(x)}$, then 
+\pf Since $\r$ is a representation of $G$ on $\O$, $\r$ is a homomorphism. Let $\a^x:=\a^{\r(x)}$, then
 \begin{align*}
  &\a^1=\a^{\r(1)}=\a;\\
- &(\a^x)^y=(\a^{\r(x)})^{\r(y)}=\a^{\r(xy)}=\a^{xy}. 
+ &(\a^x)^y=(\a^{\r(x)})^{\r(y)}=\a^{\r(xy)}=\a^{xy}.
 \end{align*}
 Thus, this defines an action of $G$ on $\O$.
 
@@ -93,7 +93,7 @@ Thus, this defines an action of $G$ on $\O$.
 
 \l 2. Explain why we do not usually get an action of a group $G$ on itself by defining $a^x:=xa$. Show, however, that $a^x:=x^{-1}a$ does give an action of $G$ on itself (called the left regular representation of $G$). Similarly, show how to define an action of a group on the set of left cosets $aH$($a\in G$) of a subgroup $H$.
 
-\pf Let $a^x:=xa$, then 
+\pf Let $a^x:=xa$, then
 \begin{align*}
  (a^x)^y=(xa)^y=yxa \neq xya=a^{xy}.
 \end{align*}
@@ -112,7 +112,7 @@ Let $\O=\{aH|\ a\in G\}$, defining an action of $G$ on $\O$ by setting $(aH)^x:=
 
 \l 3. Show that the kernel of $\r_H$ in Example 1.3.4 is equal to the largest normal subgroup of $G$ contained in the subgroup $H$.
 
-\pf Let $\Ga_H:=\{Ha|\ a\in G\}$ and define an action if $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$. We denote the corresponding representation of $G$ on $\Ga_H$ by $\r_H$. We have 
+\pf Let $\Ga_H:=\{Ha|\ a\in G\}$ and define an action if $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$. We denote the corresponding representation of $G$ on $\Ga_H$ by $\r_H$. We have
 \begin{align*}
  {\rm ker}\ \r_H\ =\ \bigcap_{a\in G}a^{-1}Ha.
 \end{align*}
@@ -124,7 +124,16 @@ Hence, by the arbitrariness of $N$, ${\rm ker}\ \r_H$ is equal to the largest no
 
 \l 4. Use the previous exercise to prove that if $G$ is a group with a subgroup $H$ of finite index $n$, then $G$ has a normal subgroup $K$ contained in $H$ whose index in $G$ is finite and divides $n!$. In particular, if $H$ has index 2 then $H$ is normal in $G$.
 
+\pf By ex.3, we have that ${\rm ker}\ \r_H$ is the largest normal subgroup of $G$ contained in the subgroup $H$. 
+Let $K= {\rm ker}\ \r_H$.
+Since $\r_H$ is the action of $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$ and $|G:H|=n$, we have that $G/ {\rm ker}\ \r_H \lesssim S_n$, that is, $|G:K|\mid n!$.
+Hence, $|G:K|$ is finite and divides $n!$.
 
+If $n=2$, then $|G:{\rm ker}\ \r_H|$=1 or 2. If $|G:{\rm ker}\ \r_H|=1$, then $G={\rm ker}\ \r_H=\bigcap_{a\in G}a^{-1}Ha$ which implies that $G=H$, contradiction. Thus, $|G:{\rm ker}\ \r_H|=2$, then $H={\rm ker}\ \r_H$, that is, $H$ is normal in $G$.
+
+\m
+
+\l 5. Let $G$ be a finite group, and let $p$ be the smallest prime which divides the order of $G$. If $G$ has a subgroup $H$ of index $p$, show that $H$ must be normal in $G$. In particular, in a finite $p$-group(that is, a group of order $p^k$ for some prime $p$) any subgroup of index $p$ is normal.
 
 
 
