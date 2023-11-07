@@ -81,6 +81,7 @@ $\Box$\fi\par\vskip12pt}
 \l Exercises
 
 \l 1. Let $\r: G\mapsto Sym(\O)$ be a representation of the group $G$ on the set $\O$. Show that this defines an action of $G$ on $\O$ by setting $\a^x:=\a^{\r(x)}$ for all $\a\in \O$ and $x\in G$, and that $\r$ is the representation which corresponds to this action.
+\m
 
 \pf Since $\r$ is a representation of $G$ on $\O$, $\r$ is a homomorphism. Let $\a^x:=\a^{\r(x)}$, then
 \begin{align*}
@@ -90,8 +91,10 @@ $\Box$\fi\par\vskip12pt}
 Thus, this defines an action of $G$ on $\O$.
 
 \m
+\m
 
 \l 2. Explain why we do not usually get an action of a group $G$ on itself by defining $a^x:=xa$. Show, however, that $a^x:=x^{-1}a$ does give an action of $G$ on itself (called the left regular representation of $G$). Similarly, show how to define an action of a group on the set of left cosets $aH$($a\in G$) of a subgroup $H$.
+\m
 
 \pf Let $a^x:=xa$, then
 \begin{align*}
@@ -109,8 +112,10 @@ Thus, this defines an action of $G$ on itself.
 Let $\O=\{aH|\ a\in G\}$, defining an action of $G$ on $\O$ by setting $(aH)^x:=x^{-1}aH$.
 
 \m
+\m
 
 \l 3. Show that the kernel of $\r_H$ in Example 1.3.4 is equal to the largest normal subgroup of $G$ contained in the subgroup $H$.
+\m
 
 \pf Let $\Ga_H:=\{Ha|\ a\in G\}$ and define an action if $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$. We denote the corresponding representation of $G$ on $\Ga_H$ by $\r_H$. We have
 \begin{align*}
@@ -121,10 +126,12 @@ Assume that $N$ is the subgroup of $H$ and $N\unlhd G$, then we have $N=N^a\le H
 Hence, by the arbitrariness of $N$, ${\rm ker}\ \r_H$ is equal to the largest normal subgroup of $G$ contained in the subgroup $H$.
 
 \m
+\m
 
 \l 4. Use the previous exercise to prove that if $G$ is a group with a subgroup $H$ of finite index $n$, then $G$ has a normal subgroup $K$ contained in $H$ whose index in $G$ is finite and divides $n!$. In particular, if $H$ has index 2 then $H$ is normal in $G$.
+\m
 
-\pf By ex.3, we have that ${\rm ker}\ \r_H$ is the largest normal subgroup of $G$ contained in the subgroup $H$. 
+\pf By Ex.3, we have that ${\rm ker}\ \r_H$ is the largest normal subgroup of $G$ contained in the subgroup $H$.
 Let $K= {\rm ker}\ \r_H$.
 Since $\r_H$ is the action of $G$ on $\Ga_H$ by right multiplication: $(Ha)^x:=Hax$ and $|G:H|=n$, we have that $G/ {\rm ker}\ \r_H \lesssim S_n$, that is, $|G:K|\mid n!$.
 Hence, $|G:K|$ is finite and divides $n!$.
@@ -132,10 +139,60 @@ Hence, $|G:K|$ is finite and divides $n!$.
 If $n=2$, then $|G:{\rm ker}\ \r_H|$=1 or 2. If $|G:{\rm ker}\ \r_H|=1$, then $G={\rm ker}\ \r_H=\bigcap_{a\in G}a^{-1}Ha$ which implies that $G=H$, contradiction. Thus, $|G:{\rm ker}\ \r_H|=2$, then $H={\rm ker}\ \r_H$, that is, $H$ is normal in $G$.
 
 \m
+\m
 
 \l 5. Let $G$ be a finite group, and let $p$ be the smallest prime which divides the order of $G$. If $G$ has a subgroup $H$ of index $p$, show that $H$ must be normal in $G$. In particular, in a finite $p$-group(that is, a group of order $p^k$ for some prime $p$) any subgroup of index $p$ is normal.
+\m
 
+\pf Since $|G:H|=p$, we have that $G$ has a normal subgroup $K$ contained in $H$ whose index in $G$ divides $p!$ by Ex.4. 
+And $p$ is the smallest prime which divides $|G|$, then $|G:K|\mid (p!,|G|)=p$.
+Thus, $H=K$ which implies that $H$ is normal in $G$. 
 
+If $G$ is $p$-group, the proof is the same as above.
+
+\m
+\m
+
+\l 6. (Number theory application)\\
+Let $p$ be a prime congruent to 1(mod 4), and consider the set 
+\begin{align*}
+ \O:=\{(x,y,z)\in \mathbb{N}^3|x^2+4yz=p\}.
+\end{align*}
+
+Show that the mapping
+\begin{align*}
+ (x,y,z)\mapsto 
+ \left\{
+ \begin{aligned}
+ &(x+2z,z,y-x-z)\ \  {\rm if}\  x<y-z \\
+ &(2y-x,y,x-y+z)\ \  {\rm if}\  y-z<x<2y \\
+ &(x-2y,x-y+z,y)\ \  {\rm if}\  x>2y
+ \end{aligned}
+ \right.
+\end{align*}
+is a permutation of order 2 on $\O$ with exactly one fixed point. Conclude that the permutation $(x,y,z)\mapsto (x,z,y)$ must also have at least one fixed point, and so $x^2+4y^2=p$ for some $x,y\in \mathbb{N}$.
+\m
+
+\pf First we show that the mapping is a permutation of order 2. It's easy to see that the mapping is a permutation, denoted by $a$.
+
+If $x<y-z$, then $(x,y,z)^a=(x+2z,z,y-x-z)$ with $x+2z>2z$. Then 
+\begin{align*}
+(x+2z,z,y-x-z)^a=((x+2z)-2z,(x+2z)-z+(y-x-z),z)=(x,y,z).
+\end{align*}
+
+If $y-z<x<2y$, then $(x,y,z)^a=(2y-x,y,x-y+z)$ with $y-(x-y+z)<2y-x<2y$. Then
+\begin{align*}
+(2y-x,y,x-y+z)^a=(2y-(2y-x),y,(2y-x)-y+(x-y+z))=(x,y,z).
+\end{align*}
+
+If $x>2y$, then $(x,y,z)^a=(x-2y,x-y+z,y)$ with $x-2y<(x-y+z)-y$. Then
+\begin{align*}
+(x-2y,x-y+z,y)^a=(x-2y+2y,y,(x-y+z)-(x-2y)-y)=(x,y,z).
+\end{align*}
+
+The permutation $a$ only fixed $(1,1,1)$ by calculations.
+
+The permutation $(x,y,z)\mapsto (x,y,z)$ has fixed point if and only if $y=z$, that is, $x^2+4y^2=p$.
 
 
 \end{document}
